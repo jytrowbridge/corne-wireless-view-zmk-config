@@ -10,13 +10,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // outstanding:
-// function
-// symbols
 // bluetooth
 // media
-// gresc
 // macros-- maybe just use modifier functions
-// one-shot mods on base?
+// one-shot mods on base
+// mouse layer toggle
 
 / {
         keymap {
@@ -31,6 +29,7 @@
                             &kp LGUI  &lt 4 SPACE  &lt 5 TAB      &lt 2 RET  &lt 1 BSPC  &lt 3 DEL
                         >;
                 };
+
                 num_layer {
                         display-name = "Num";
                         bindings = <
@@ -47,7 +46,7 @@
    &kp TAB    &kp GRAVE   &kp LBKT     &kp AMPS   &kp RBKT     &kp FSLH       &trans   &trans     &trans      &trans    &trans  &trans
    &kp LCTRL  &kp DOLLAR  &kp KP_LPAR  &kp EXCL   &kp KP_RPAR  &kp BSLH       &trans   &kp RCTRL  &kp RSHIFT  &kp RALT  &trans  &trans
    &kp LSHFT  &kp POUND   &kp STAR     &kp AT     &kp PRCNT    &kp CARET      &trans   &trans     &trans      &trans    &trans  &trans
-                                       &kp MINUS  &kp EQUAL    kp SEMI        &trans   &trans     &trans
+                                       &kp MINUS  &kp EQUAL    &kp SEMI       &trans   &trans     &trans
                         >;
                 };
 
