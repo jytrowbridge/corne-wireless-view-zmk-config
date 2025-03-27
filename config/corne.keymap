@@ -40,9 +40,9 @@
 
                         display-name = "Num";
                         bindings = <
-   &kp TAB   &kp STAR   &kp N7  &kp N8  &kp N9  &kp KP_PLUS       &kp N6   &kp N7    &kp N8     &kp N9    &kp N0  &trans
-   &kp LCTRL &kp PRCNT  &kp N4  &kp N5  &kp N6  &kp KP_EQUAL      &trans   &kp CTRL  &kp SHIFT  &kp ALT   &trans  &trans
-   &kp LSHFT &kp FSLH   &kp N1  &kp N2  &kp N3  &kp KP_MINUS      &kp N1   &kp N2    &kp N3     &kp N4    &kp N5  &trans
+   &kp TAB   &kp STAR   &kp N7  &kp N8  &kp N9  &kp KP_PLUS       &kp N6   &kp N7     &kp N8      &kp N9     &kp N0  &trans
+   &kp LCTRL &kp PRCNT  &kp N4  &kp N5  &kp N6  &kp KP_EQUAL      &trans   &kp RCTRL  &kp RSHIFT  &kp RALT   &trans  &trans
+   &kp LSHFT &kp FSLH   &kp N1  &kp N2  &kp N3  &kp KP_MINUS      &kp N1   &kp N2     &kp N3      &kp N4     &kp N5  &trans
                   &trans     &kp N0     &trans           &kp RET  &trans    &kp RALT
                         >;
                 };
@@ -51,9 +51,9 @@
 
                         display-name = "Sym";
                         bindings = <
-   &kp TAB    &kp GRAVE   &kp LBKT     &kp AMP    &kp RBKT      &kp FSLH         &trans   &trans   &trans     &trans   &trans  &trans
-   &kp LCTRL  &kp DOLLAR  &kp KP_LPAR  &kp EXCL   &kp KP_RPAR   &kp BSLH         &trans   &kp CTRL &kp SHIFT  &kp ALT  &trans  &trans
-   &kp LSHFT  &kp POUND   &kp STAR     &kp AT     &kp PCT       &kp CARET        &trans   &trans   &trans     &trans   &trans  &trans
+   &kp TAB    &kp GRAVE   &kp LBKT     &kp AMP    &kp RBKT      &kp FSLH         &trans   &trans     &trans      &trans    &trans  &trans
+   &kp LCTRL  &kp DOLLAR  &kp KP_LPAR  &kp EXCL   &kp KP_RPAR   &kp BSLH         &trans   &kp RCTRL  &kp RSHIFT  &kp RALT  &trans  &trans
+   &kp LSHFT  &kp POUND   &kp STAR     &kp AT     &kp PCT       &kp CARET        &trans   &trans     &trans      &trans    &trans  &trans
                   &kp MINUS     &kp EQUAL    &kp SEMI      &trans  &trans   &trans
                         >;
                 };
@@ -62,9 +62,9 @@
 
                         display-name = "Fun";
                         bindings = <
-   &kp TAB    &trans &kp F7   &kp F8   &kp F9   &kp F10         &trans  &trans    &trans     &trans   &trans  &trans
-   &kp LCTRL  &trans &kp F4   &kp F5   &kp F6   &kp F11         &trans  &kp CTRL  &kp SHIFT  &kp ALT  &trans  &trans
-   &kp LSHFT  &trans &kp F1   &kp F2   &kp F3   &kp F12         &trans  &trans    &trans     &trans   &trans  &trans
+   &kp TAB    &trans &kp F7   &kp F8   &kp F9   &kp F10         &trans  &trans     &trans      &trans    &trans  &trans
+   &kp LCTRL  &trans &kp F4   &kp F5   &kp F6   &kp F11         &trans  &kp RCTRL  &kp RSHIFT  &kp RALT  &trans  &trans
+   &kp LSHFT  &trans &kp F1   &kp F2   &kp F3   &kp F12         &trans  &trans     &trans      &trans    &trans  &trans
                   &trans     &trans    &trans      &trans  &trans   &trans
                         >;
                 };
