@@ -63,9 +63,9 @@
                 nav_layer {
                         display-name = "Nav";
                         bindings = <
-   &kp TAB   &trans  &trans     &trans      &trans    &trans      &trans    &HOME      &END       &trans    &trans &kp BSPC
-   &trans    &trans  &kp LCTRL  &kp LSHIFT  &kp LALT  &trans      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT &trans &trans
-   &kp LSHFT &trans  &trans     &trans      &trans    &trans      &trans    &kp PG_DN  &kp PG_UP  &trans    &trans &trans
+   &kp TAB   &trans  &trans     &trans      &trans    &trans      &trans    &kp HOME   &kp END    &trans     &trans  &kp BSPC
+   &trans    &trans  &kp LCTRL  &kp LSHIFT  &kp LALT  &trans      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+   &kp LSHFT &trans  &trans     &trans      &trans    &trans      &trans    &kp PG_DN  &kp PG_UP  &trans     &trans  &trans
                                 &trans      &trans    &trans      &trans    &trans     &trans
                         >;
                 };
