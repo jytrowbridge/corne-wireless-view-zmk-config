@@ -53,7 +53,7 @@
                         bindings = <
    &kp TAB    &kp GRAVE   &kp LBKT     &kp AMPS   &kp RBKT      &kp FSLH         &trans   &trans     &trans      &trans    &trans  &trans
    &kp LCTRL  &kp DOLLAR  &kp KP_LPAR  &kp EXCL   &kp KP_RPAR   &kp BSLH         &trans   &kp RCTRL  &kp RSHIFT  &kp RALT  &trans  &trans
-   &kp LSHFT  &kp POUND   &kp STAR     &kp AT     &kp PCT       &kp CARET        &trans   &trans     &trans      &trans    &trans  &trans
+   &kp LSHFT  &kp POUND   &kp STAR     &kp AT     &kp PRCNT     &kp CARET        &trans   &trans     &trans      &trans    &trans  &trans
                   &kp MINUS     &kp EQUAL    &kp SEMI      &trans  &trans   &trans
                         >;
                 };
