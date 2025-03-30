@@ -66,7 +66,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 // Alt+Tab swapper, requires tri-state module.
 ZMK_TRI_STATE(swapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-              ignored-key-positions = <LT2 RT2 RM1 RM2 RM3>;)
+              ignored-key-positions = <LT2 RM1 RM2 RM3 RM4>;)
 
 
 /* Layers */
