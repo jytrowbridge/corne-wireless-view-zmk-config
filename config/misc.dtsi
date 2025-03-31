@@ -1,0 +1,25 @@
+#include <dt-bindings/zmk/behaviors.h>
+#include <dt-bindings/zmk/keys.h>
+
+// Alt+Tab swapper, requires tri-state module.
+ZMK_TRI_STATE(aswapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+              ignored-key-positions = <LT2 RM1 RM2 RM3 RM4>;)
+
+
+// Super+grave swapper: swap between windows of same app
+ZMK_TRI_STATE(gswapper, bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+              ignored-key-positions = <LT2 RM1 RM2 RM3 RM4>;)
+
+
+ZMK_TRI_STATE(qswapper, bindings = <&kt LALT>, <&kp ESC>, <&kt LALT>;)
+
+/ {
+    behaviors {
+        mswap: mswap {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&aswapper>, <&gswapper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
