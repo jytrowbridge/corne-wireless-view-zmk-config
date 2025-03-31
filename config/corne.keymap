@@ -112,19 +112,14 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV MED>;
-            then-layer = <SYS>;
-        };
-    };
-};
-
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
+        workspace_layer {
             if-layers = <NAV NUM>;
             then-layer = <WSP>;
+        };
+
+        sys_layer {
+            if-layers = <NAV MED>;
+            then-layer = <SYS>;
         };
     };
 };
