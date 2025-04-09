@@ -49,7 +49,13 @@
 };
 
 
-// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+// Tap: esc | double-tap: caps word | Hold: shift
+#define ESC_SHIFT &esc_shift LSHFT 0
+ZMK_HOLD_TAP(esc_shift, bindings = <&kp>, <&shift_dance>; flavor = "balanced"; tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(shift_dance, bindings = <&kp ESC>, <&caps_word>;
+              tapping-term-ms = <200>;)
+
+
 #define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
@@ -132,20 +138,20 @@ ZMK_LAYER(Base,
 //     ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp LA(TAB)   &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G           &kp M         &hmr RCTRL N  &hmr RSHFT E  &hmr RALT I   &hmr RGUI O   &kp SQT 
 //     ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &kp LSHIFT    &kp Z         &kp X         &kp C         &kp D         &kp V           &kp K         &kp H         &comma_morph  &dot_morph    &qexcl        &kp LG(LS(P))     
+         &smart_mouse   &kp Z         &kp X         &kp C         &kp D         &kp V           &kp K         &kp H         &comma_morph  &dot_morph    &qexcl        &kp LG(LS(P))     
 //     ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                    &kp ESC      &lt NAV SPACE &lt MED TAB     &lt MED RET   &lt FUN BSPC   SMART_NUM
+                                                   ESC_SHIFT     &lt NAV SPACE &lt MED TAB     &lt MED RET   &lt FUN BSPC   SMART_NUM
 //                                               ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
 // esc on hold / sticky shift on tap / caps lock on double tap?
 )
 
 ZMK_LAYER(Nav,
 //     ╭────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-         ___           ___           ___           NWSP         PWSP           ___             ___           &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       ___      
+         ___           &kp END        PWSP         NWSP          &kp HOME        ___            ___           &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       ___      
 //     ├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___           &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     ___             ___           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     ___
+         ___           &mt LGUI LEFT  &mt LALT DOWN &mt LSHFT UP &mt LCTRL RIGHT ___             ___           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     ___
 //     ├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___           ___           ___           ___           ___           ___             ___           PASTE         COPY          CUT           &kp INS       ___       
+         ___           ___           CUT           COPY          PASTE         ___             ___           PASTE         COPY          CUT           &kp INS       ___       
 //     ╰────────────┼──────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                    _PASSTHRU_THUMBS_                           _PASSTHRU_THUMBS_
 //                                               ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -158,7 +164,7 @@ ZMK_LAYER(Num, // todo add cancel
 //     ├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          ___           &kp N0        &hml LALT N4  &hml LSHFT N5 &hml LCTRL N6  &kp EQUAL      &kp DOT       &hmr RALT N4  &hmr RSHFT N5 &hmr RCTRL N6  &kp N0        ___
 //     ├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___           ___           &kp N1        &kp N2        &kp N3         &kp STAR       &kp FSLH      &kp N1        &kp N2        &kp N3         ___           ___       
+         ___           ___           &kp N1        &kp N2        &kp N3         &kp STAR       &kp FSLH      &kp N1        &kp N2        &kp N3         &kp DOT       ___       
 //     ╰────────────┼──────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                    _PASSTHRU_THUMBS_                           _PASSTHRU_THUMBS_
 //                                               ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
